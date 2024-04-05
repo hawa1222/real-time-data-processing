@@ -1,0 +1,12 @@
+apiVersion: 1
+
+datasources:
+   - name: MySQL
+     type: mysql
+     url: ${MYSQL_HOST}:${MYSQL_PORT}
+     database: ${MYSQL_DATABASE}
+     user: ${MYSQL_USER}
+     secureJsonData: 
+      password: ${MYSQL_PASSWORD}
+     access: proxy
+     isDefault: true

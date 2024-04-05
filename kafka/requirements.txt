@@ -1,0 +1,5 @@
+kafka-python==2.0.2
+requests
+mysql-connector-python
+pandas
+python-dotenv
