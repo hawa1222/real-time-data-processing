@@ -14,7 +14,7 @@ logging.basicConfig(level=LOGGING_LEVEL, format='%(asctime)s - %(levelname)s - %
 
 # Constants
 KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', 'stock_prices')
-KAFKA_SERVER = os.getenv('KAFKA_SERVER')
+KAFKA_SERVER = os.getenv('KAFKA_SERVER', 'kafka_broker:29092')
 
 MYSQL_HOST = os.getenv('MYSQL_HOST')
 MYSQL_PORT = os.getenv('MYSQL_PORT')

@@ -24,7 +24,7 @@ STOCK_SYMBOL = os.getenv('STOCK_SYMBOL', 'AAPL')
 URL = f'https://financialmodelingprep.com/api/v3/quote/{STOCK_SYMBOL}?apikey={API_KEY}'
 
 KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', 'stock_prices')
-KAFKA_SERVER = os.getenv('KAFKA_SERVER')
+KAFKA_SERVER = os.getenv('KAFKA_SERVER', 'kafka_broker:29092')
 MAX_RETRIES = int(os.getenv('KAFKA_MAX_RETRIES', '5'))
 RETRY_DELAY = int(os.getenv('KAFKA_RETRY_DELAY', '2'))
 
