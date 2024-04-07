@@ -20,8 +20,10 @@ logging.getLogger('kafka').setLevel(LOGGING_LEVEL)
 
 # Constants
 API_KEY = os.getenv('API_KEY')
-STOCK_SYMBOL = os.getenv('STOCK_SYMBOL', 'AAPL')
-URL = f'https://financialmodelingprep.com/api/v3/quote/{STOCK_SYMBOL}?apikey={API_KEY}'
+# Fetch the stock symbols from the environment variable and split it into a list
+STOCK_SYMBOLS = os.getenv('STOCK_SYMBOLS', 'AAPL').split(',')
+# Generate the list of URLs for each stock symbol
+URLS = [f'https://financialmodelingprep.com/api/v3/quote/{symbol}?apikey={API_KEY}' for symbol in STOCK_SYMBOLS]
 
 KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', 'stock_prices')
 KAFKA_SERVER = os.getenv('KAFKA_SERVER', 'kafka_broker:29092')
@@ -33,7 +35,7 @@ logging.info(f'Kafka-Python package version: {kafka.__version__}')
 
 api_key_log = "set" if API_KEY else "not set"
 logging.info(f"API_KEY is {api_key_log}.")
-logging.info(f"STOCK_SYMBOL: {STOCK_SYMBOL}")
+logging.info(f"STOCK_SYMBOL: {STOCK_SYMBOLS}")
 
 logging.info(f"KAFKA_SERVER: {KAFKA_SERVER}, KAFKA_TOPIC: {KAFKA_TOPIC}")
 
@@ -81,19 +83,19 @@ def fetch_stock_data(url):
 
 # Continuously fetch and send data
 while True:
-
     logging.info("Current environment:", dict(os.environ))
 
-    stock_data = fetch_stock_data(URL)
+    for url, symbol in zip(URLS, STOCK_SYMBOLS):
+        stock_data = fetch_stock_data(url)
 
-    # Only send the data if fetch was successful
-    if stock_data:
-        try:
-            # Send data to Kafka topic
-            producer.send(KAFKA_TOPIC, value=stock_data)
-            logging.info(f"Fetched and sent data: {stock_data}")
-        except Exception as e:
-            logging.error(f"An error occurred while sending data to Kafka: {e}")
+        if stock_data:
+            try:
+                # Add stock symbol to the data
+                stock_data[0]['symbol'] = symbol  # Assuming the API returns a list with a single dictionary
+                producer.send(KAFKA_TOPIC, value=stock_data[0])
+                logging.info(f"Fetched and sent data for {symbol}: {stock_data}")
+            except Exception as e:
+                logging.error(f"An error occurred while sending data to Kafka for {symbol}: {e}")
 
     # Sleep for 60 seconds after each request to rate limit API calls
     time.sleep(60)
