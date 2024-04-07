@@ -21,14 +21,14 @@ pip install --upgrade pip
 
 # Install Python dependencies using pip
 echo "Installing Python dependencies from the main requirements.txt..."
-pip install -r /Users/hadid/GitHub/real-time-data-processing/requirements.txt
+pip install -r requirements.txt
 
 # Below commands install dependencies from those additional requirements.txt files
 echo "Installing Python dependencies from Kafka requirements.txt..."
-pip install -r /Users/hadid/GitHub/real-time-data-processing/kafka/requirements.txt
+pip install -r kafka/requirements.txt
 
 echo "Installing Python dependencies from Spark requirements.txt..."
-pip install -r /Users/hadid/GitHub/real-time-data-processing/spark/requirements.txt
+pip install -r spark/requirements.txt
 
 # Indicate the completion of the environment setup
 echo "Environment setup is complete. The virtual environment 'rtpenv' is now ready for use."

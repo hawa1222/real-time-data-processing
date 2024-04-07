@@ -27,31 +27,62 @@ This project demonstrates a real-time financial data processing pipeline using A
    cd real-time-data-processing
    ```
 
-3. Create a `.env` file in the project's root directory and provide the necessary environment variables:
+3. Set up your environment:
 
-   - FINANCIAL_MODELING_PREP_API_KEY=`your_api_key`
-   - MYSQL_HOST=database
-   - MYSQL_PORT=3306
-   - MYSQL_USER=`your_username`
-   - MYSQL_DATABASE=`your_database`
-   - MYSQL_PASSWORD=`your_password`
-   - MYSQL_ROOT_PASSWORD=`your_root_password`
-   - GRAFANA_ADMIN_PASSWORD=`your_grafana_admin_password`
+   Make the setup script executable (if it's not already):
 
-   Replace `your_api_key`, `your_username`, `your_database`, `your_password`, `your_root_password` and `your_grafana_admin_password` with your actual values.
+   ```
+   chmod +x setup_environment.sh
+   ```
 
-4. Build and run the Docker containers:
+   Then run the `setup_environment.sh` script to create a virtual environment and install all necessary packages. Execute this script from the root directory of the project:
+
+   ```
+   ./setup_environment.sh
+   ```
+
+4. Create a `.env` file in the project's root directory and provide the necessary environment variables:
+
+    ```plaintext
+   FINANCIAL_MODELING_PREP_API_KEY=YOUR_API_KEY
+   MYSQL_HOST=database
+   MYSQL_PORT=3306
+   MYSQL_USER=YOUR_USERNAME
+   MYSQL_DATABASE=YOUR_DATABASE
+   MYSQL_PASSWORD=YOUR_PASSWORD
+   MYSQL_ROOT_PASSWORD=YOUR_ROOT_PASSWORD
+   GRAFANA_ADMIN_PASSWORD=YOUR_GRAFANA_ADMIN_PASSWORD
+   ```
+
+   Replace YOUR_API_KEY, YOUR_USERNAME, YOUR_DATABASE, YOUR_PASSWORD, YOUR_ROOT_PASSWORD, and YOUR_GRAFANA_ADMIN_PASSWORD with your actual values.
+
+5. Running Spark and Kafka scripts as standalone (Optional):
+
+   If you wish to run the Spark and Kafka Python scripts individually without using Docker, activate the virtual environment created by setup_environment.sh and run the scripts from the command line.
+
+   For Kafka:
+    ```
+   python kafka/kafka_producer.py
+   ```
+
+   For Spark:
+    ```
+   python spark/process_data.py
+   ```
+
+6. Build and run the Docker containers:
    ```
    docker-compose up --build
    ```
 
    This command will build the Docker images and start the containers for each service (Kafka, Spark, MySQL, and Grafana).
 
-5. Access the Grafana dashboard:
+
+7. Access the Grafana dashboard:
 
    Open your web browser and visit `http://localhost:3000`. Log in using the admin credentials you provided in the `.env` file.
 
-6. Configure the Grafana dashboard:
+8. Configure the Grafana dashboard:
 
    - The MySQL data source should be automatically configured based on the `datasource.yml` file.
    - The default dashboard for visualizing stock data should be imported automatically based on the `stock_data_dashboard.json` file.
