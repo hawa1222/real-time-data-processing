@@ -1,13 +1,13 @@
 # Real-time Financial Data Processing with Kafka, Spark, MySQL, and Grafana
 
-This project demonstrates a real-time financial data processing pipeline using Apache Kafka, Apache Spark, MySQL, and Grafana, all orchestrated with Docker. The pipeline fetches stock data from the Financial Modeling Prep API, processes it using Spark, stores the processed data in MySQL, and visualizes it using Grafana.
+This project demonstrates a real-time financial data processing pipeline using Apache Kafka, Apache Spark, MySQL, and Grafana, all orchestrated with Docker. The pipeline fetches stock data from the Financial Modeling Prep API, processes it using Spark, stores the processed data in MySQL, and visualises it using Grafana.
 
 ## Project Objectives
 
 - Set up a real-time data ingestion system using Apache Kafka
 - Process streaming data in real-time using Apache Spark
 - Store processed data in a MySQL database
-- Visualize the processed data using Grafana
+- Visualise the processed data using Grafana
 - Orchestrate the entire pipeline using Docker
 
 ## Prerequisites
@@ -54,14 +54,14 @@ The project consists of the following components:
 - Kafka: A distributed streaming platform that ingests real-time data from the Kafka Producer and makes it available for processing.
 - Spark: A distributed computing system that consumes data from Kafka, processes it in real-time, and stores the processed data in a MySQL database.
 - MySQL: A relational database management system used to store the processed stock data.
-- Grafana: An open-source platform for data visualization and monitoring, used to create dashboards and visualize the processed stock data.
+- Grafana: An open-source platform for data visualization and monitoring, used to create dashboards and visualise the processed stock data.
 
-The project uses a `requirements.txt` file to manage the Python dependencies for the Kafka producer and Spark processing scripts. The dependencies are installed within the respective Docker containers during the build process.
+The project uses `requirements.txt` files to manage the Python dependencies for the Kafka producer and Spark processing scripts. The dependencies are installed within the respective Docker containers during the build process.
 
 ## Additional Configuration
 
 - Update the `datasource.yml` file in the `grafana/` directory to change the MySQL connection details if required.
-- Customize the `stock_data_dashboard.json` file in the `grafana/` directory to modify the default Grafana dashboard.
+- Customise the `stock_data_dashboard.json` file in the `grafana/` directory to modify the default Grafana dashboard.
 
 ## License
 
