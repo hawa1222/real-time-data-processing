@@ -85,7 +85,7 @@ This project demonstrates a real-time financial data processing pipeline using A
 8. Configure the Grafana dashboard:
 
    - The MySQL data source should be automatically configured based on the `datasource.yml` file.
-   - The default dashboard for visualizing stock data should be imported automatically based on the `stock_data_dashboard.json` file.
+   - The default dashboard for visualising stock data should be imported automatically based on the `stock_data_dashboard.json` file.
 
 ## Project Architecture
 
