@@ -19,3 +19,4 @@ ENV/
 # Custom directories to ignore
 /logs/
 rtpenv/
+checkpoint/
