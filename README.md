@@ -29,14 +29,14 @@ This project demonstrates a real-time financial data processing pipeline using A
 
 3. Create a `.env` file in the project's root directory and provide the necessary environment variables:
 
-   FINANCIAL_MODELING_PREP_API_KEY=`your_api_key`
-   MYSQL_HOST=database
-   MYSQL_PORT=3306
-   MYSQL_USER=`your_username`
-   MYSQL_DATABASE=`your_database`
-   MYSQL_PASSWORD=`your_password`
-   MYSQL_ROOT_PASSWORD=`your_root_password`
-   GRAFANA_ADMIN_PASSWORD=`your_grafana_admin_password`
+   - FINANCIAL_MODELING_PREP_API_KEY=`your_api_key`
+   - MYSQL_HOST=database
+   - MYSQL_PORT=3306
+   - MYSQL_USER=`your_username`
+   - MYSQL_DATABASE=`your_database`
+   - MYSQL_PASSWORD=`your_password`
+   - MYSQL_ROOT_PASSWORD=`your_root_password`
+   - GRAFANA_ADMIN_PASSWORD=`your_grafana_admin_password`
 
    Replace `your_api_key`, `your_username`, `your_database`, `your_password`, `your_root_password` and `your_grafana_admin_password` with your actual values.
 
