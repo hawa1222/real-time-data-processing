@@ -19,7 +19,7 @@ This project demonstrates a real-time financial data processing pipeline using A
 
 1. Clone the project repository:
 
-   git clone https://github.com/your-username/real-time-data-processing.git
+   git clone https://github.com/hawa1222/real-time-data-processing.git
 
 2. Navigate to the project directory:
 
@@ -27,7 +27,7 @@ This project demonstrates a real-time financial data processing pipeline using A
 
 3. Create a `.env` file in the project's root directory and provide the necessary environment variables:
 
-   FINANCIAL_MODELING_PREP_API_KEY='your_api_key', MYSQL_HOST=database, MYSQL_PORT=3306, MYSQL_USER='your_username', MYSQL_PASSWORD='your_password', MYSQL_DATABASE='your_database', GRAFANA_ADMIN_PASSWORD='your_grafana_admin_password'.
+   FINANCIAL_MODELING_PREP_API_KEY=`your_api_key`, MYSQL_HOST=database, MYSQL_PORT=3306, MYSQL_USER=`your_username`, MYSQL_PASSWORD=`your_password`, MYSQL_DATABASE='`your_database`, GRAFANA_ADMIN_PASSWORD=`your_grafana_admin_password`.
 
    Replace `your_api_key`, `your_username`, `your_password`, `your_database`, and `your_grafana_admin_password` with your actual values.
 
