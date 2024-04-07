@@ -18,12 +18,14 @@ This project demonstrates a real-time financial data processing pipeline using A
 ## Setup Instructions
 
 1. Clone the project repository:
-
+   ```
    git clone https://github.com/hawa1222/real-time-data-processing.git
+   ```
 
 2. Navigate to the project directory:
-
+   ```
    cd real-time-data-processing
+   ```
 
 3. Create a `.env` file in the project's root directory and provide the necessary environment variables:
 
@@ -32,9 +34,10 @@ This project demonstrates a real-time financial data processing pipeline using A
    Replace `your_api_key`, `your_username`, `your_password`, `your_database`, and `your_grafana_admin_password` with your actual values.
 
 4. Build and run the Docker containers:
-
+   ```
    docker-compose up --build
-
+   ```
+   
    This command will build the Docker images and start the containers for each service (Kafka, Spark, MySQL, and Grafana).
 
 5. Access the Grafana dashboard:
