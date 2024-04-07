@@ -54,7 +54,7 @@ This project demonstrates a real-time financial data processing pipeline using A
    GRAFANA_ADMIN_PASSWORD=YOUR_GRAFANA_ADMIN_PASSWORD
    ```
 
-   Replace YOUR_API_KEY, YOUR_USERNAME, YOUR_DATABASE, YOUR_PASSWORD, YOUR_ROOT_PASSWORD, and YOUR_GRAFANA_ADMIN_PASSWORD with your actual values.
+   Replace `YOUR_API_KEY`, `YOUR_USERNAME`, `YOUR_DATABASE`, `YOUR_PASSWORD`, `YOUR_ROOT_PASSWORD`, and Y`OUR_GRAFANA_ADMIN_PASSWORD` with your actual values.
 
 5. Running Spark and Kafka scripts as standalone (Optional):
 
