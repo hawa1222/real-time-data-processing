@@ -101,7 +101,7 @@ The project uses `requirements.txt` files to manage the Python dependencies for 
 
 ## Additional Configuration
 
-- Update the `datasource.yml` file in the `grafana/` directory to change the MySQL connection details if required.
+- Update the `.env` file root directory to change the MySQL connection details if required.
 - Customise the `stock_data_dashboard.json` file in the `grafana/` directory to modify the default Grafana dashboard.
 
 ## License
