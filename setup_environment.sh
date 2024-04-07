@@ -7,8 +7,8 @@ set -e
 echo "Starting environment setup..."
 
 # Create a new Python virtual environment named rtpenv in the current directory
-echo "Creating a new virtual environment named etlenv with the default Python 3 version..."
-python3 -m venv etlenv
+echo "Creating a new virtual environment named rtpenv with the default Python 3 version..."
+python3 -m venv rtpenv
 
 # Activate the newly created environment
 # Note: The method of activation depends on your shell. The below command works for bash/sh.
