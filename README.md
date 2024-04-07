@@ -15,31 +15,6 @@ This project demonstrates a real-time financial data processing pipeline using A
 - Docker: Install Docker and Docker Compose on your machine.
 - Financial Modeling Prep API Key: Sign up for a free API key at [Financial Modeling Prep](https://site.financialmodelingprep.com/).
 
-## Project Structure
-
-real-time-data-processing/
-├── .env
-├── .gitignore
-├── database/
-│   └── Dockerfile
-├── docker-compose.yml
-├── grafana/
-│   ├── dashboard.yml
-│   ├── datasource.yml
-│   └── stock_data_dashboard.json
-├── kafka/
-│   ├── Dockerfile
-│   ├── kafka_producer.py
-│   └── wait-for-it.sh
-├── logs/
-├── README.md
-├── requirements.txt
-├── setup_environment.sh
-└── spark/
-    ├── Dockerfile
-    ├── process_data.py
-    └── requirements.txt
-
 ## Setup Instructions
 
 1. Clone the project repository:
@@ -52,13 +27,7 @@ real-time-data-processing/
 
 3. Create a `.env` file in the project's root directory and provide the necessary environment variables:
 
-   FINANCIAL_MODELING_PREP_API_KEY=your_api_key
-   MYSQL_HOST=database
-   MYSQL_PORT=3306
-   MYSQL_USER=your_username
-   MYSQL_PASSWORD=your_password
-   MYSQL_DATABASE=your_database
-   GRAFANA_ADMIN_PASSWORD=your_grafana_admin_password
+   FINANCIAL_MODELING_PREP_API_KEY='your_api_key', MYSQL_HOST=database, MYSQL_PORT=3306, MYSQL_USER='your_username', MYSQL_PASSWORD='your_password', MYSQL_DATABASE='your_database', GRAFANA_ADMIN_PASSWORD='your_grafana_admin_password'.
 
    Replace `your_api_key`, `your_username`, `your_password`, `your_database`, and `your_grafana_admin_password` with your actual values.
 
@@ -96,4 +65,4 @@ The project uses a `requirements.txt` file to manage the Python dependencies for
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
