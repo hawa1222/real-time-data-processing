@@ -25,6 +25,7 @@ The project uses `requirements.txt` files to manage the Python dependencies for 
 
 ## Prerequisites
 
+- Python (version 3.12)
 - Docker: Install Docker and Docker Compose on your machine.
 - Financial Modeling Prep API Key: Sign up for a free API key at [Financial Modeling Prep](https://site.financialmodelingprep.com/).
 
