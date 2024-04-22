@@ -10,6 +10,19 @@ This project demonstrates a real-time financial data processing pipeline using A
 - Visualise the processed data using Grafana
 - Orchestrate the entire pipeline using Docker
 
+## Project Architecture
+
+The project consists of the following components:
+
+- Kafka Producer: A Python script that fetches real-time stock data from the Financial Modeling Prep API and publishes it to a Kafka topic.
+- Kafka: A distributed streaming platform that ingests real-time data from the Kafka Producer and makes it available for processing.
+- Spark: A distributed computing system that consumes data from Kafka, processes it in real-time, and stores the processed data in a MySQL database.
+- MySQL: A relational database management system used to store the processed stock data.
+- Grafana: An open-source platform for data visualization and monitoring, used to create dashboards and visualise the processed stock data.
+
+The project uses `requirements.txt` files to manage the Python dependencies for the Kafka producer and Spark processing scripts. The dependencies are installed within the respective Docker containers during the build process.
+
+
 ## Prerequisites
 
 - Docker: Install Docker and Docker Compose on your machine.
@@ -75,17 +88,6 @@ This project demonstrates a real-time financial data processing pipeline using A
    - The MySQL data source should be automatically configured based on the `datasource.yml` file.
    - The default dashboard for visualising stock data should be imported automatically based on the `stock_data_dashboard.json` file.
 
-## Project Architecture
-
-The project consists of the following components:
-
-- Kafka Producer: A Python script that fetches real-time stock data from the Financial Modeling Prep API and publishes it to a Kafka topic.
-- Kafka: A distributed streaming platform that ingests real-time data from the Kafka Producer and makes it available for processing.
-- Spark: A distributed computing system that consumes data from Kafka, processes it in real-time, and stores the processed data in a MySQL database.
-- MySQL: A relational database management system used to store the processed stock data.
-- Grafana: An open-source platform for data visualization and monitoring, used to create dashboards and visualise the processed stock data.
-
-The project uses `requirements.txt` files to manage the Python dependencies for the Kafka producer and Spark processing scripts. The dependencies are installed within the respective Docker containers during the build process.
 
 ## Additional Configuration
 
