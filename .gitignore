@@ -2,6 +2,13 @@
 __pycache__/
 *.py[cod]
 *.pyo
+*$py.class
+
+# Ignore all .DS_Store (specific to macOS)
+.DS_Store
+
+# Ignore .pytest_cache for Python testing
+.pytest_cache/
 
 # Environments
 .env

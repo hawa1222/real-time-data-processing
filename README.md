@@ -41,20 +41,8 @@ This project demonstrates a real-time financial data processing pipeline using A
    ./setup_environment.sh
    ```
 
-4. Create a `.env` file in the project's root directory and provide the necessary environment variables:
+4. Create a `.env` file in the project root directory and provide the environment variables as specified in `.env_template`.
 
-    ```plaintext
-   FINANCIAL_MODELING_PREP_API_KEY=YOUR_API_KEY
-   MYSQL_HOST=database
-   MYSQL_PORT=3306
-   MYSQL_USER=YOUR_USERNAME
-   MYSQL_DATABASE=YOUR_DATABASE
-   MYSQL_PASSWORD=YOUR_PASSWORD
-   MYSQL_ROOT_PASSWORD=YOUR_ROOT_PASSWORD
-   GRAFANA_ADMIN_PASSWORD=YOUR_GRAFANA_ADMIN_PASSWORD
-   ```
-
-   Replace `YOUR_API_KEY`, `YOUR_USERNAME`, `YOUR_DATABASE`, `YOUR_PASSWORD`, `YOUR_ROOT_PASSWORD`, and `YOUR_GRAFANA_ADMIN_PASSWORD` with your actual values.
 
 5. Running Spark and Kafka scripts as standalone (Optional):
 
