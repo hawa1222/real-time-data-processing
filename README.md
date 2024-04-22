@@ -59,7 +59,13 @@ The project uses `requirements.txt` files to manage the Python dependencies for 
 
 ## Usage
 
-1. Running Spark and Kafka scripts as standalone (Optional):
+
+1. Build and run the Docker containers:
+   ```
+   docker-compose up --build
+   ```
+
+   - This command will build the Docker images and start the containers for each service (Kafka, Spark, MySQL, and Grafana).
 
    If you wish to run the Spark and Kafka Python scripts individually without using Docker, activate the virtual environment created by setup_environment.sh, run zookeeper & kafka locally, and run the scripts from the command line.
 
@@ -73,17 +79,9 @@ The project uses `requirements.txt` files to manage the Python dependencies for 
    python spark/process_data.py
    ```
 
-2. Build and run the Docker containers:
-   ```
-   docker-compose up --build
-   ```
+2. Access the Grafana dashboard:
 
-   This command will build the Docker images and start the containers for each service (Kafka, Spark, MySQL, and Grafana).
-
-
-3. Access the Grafana dashboard:
-
-   Open your web browser and visit `http://localhost:3000`. Log in using the admin credentials you provided in the `.env` file.
+   Open your web browser and visit [http://localhost:3000](http://localhost:3000/). Log in using the admin credentials you provided in the `.env` file.
 
    - The MySQL data source should be automatically configured based on the `datasource.yml` file.
    - The default dashboard for visualising stock data should be imported automatically based on the `stock_data_dashboard.json` file.
