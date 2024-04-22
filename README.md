@@ -70,14 +70,14 @@ The project uses `requirements.txt` files to manage the Python dependencies for 
    If you wish to run the Spark and Kafka Python scripts individually without using Docker, activate the virtual environment created by setup_environment.sh, run zookeeper & kafka locally, and run the scripts from the command line.
 
    - For Kafka:
-    ```
-   python kafka/kafka_producer.py
-   ```
+     ```
+     python kafka/kafka_producer.py
+     ```
 
    - For Spark:
-    ```
-   python spark/process_data.py
-   ```
+     ```
+     python spark/process_data.py
+     ```
 
 2. Access the Grafana dashboard:
 
