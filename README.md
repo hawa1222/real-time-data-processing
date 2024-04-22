@@ -1,4 +1,4 @@
-# Real-time Financial Data Processing with Kafka, Spark, MySQL, and Grafana
+# Real-time Financial Data Processing Pipeline
 
 This project demonstrates a real-time financial data processing pipeline using Apache Kafka, Apache Spark, MySQL, and Grafana, all orchestrated with Docker. The pipeline fetches stock data from the Financial Modeling Prep API, processes it using Spark, stores the processed data in MySQL, and visualises it using Grafana.
 
